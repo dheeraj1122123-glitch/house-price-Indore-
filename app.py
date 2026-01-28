@@ -1,7 +1,16 @@
 import streamlit as st
 import pandas as pd
 import joblib
+st.markdown(
+    """
+    <head>
+        <meta name="google-site-verification" content="<meta name="google-site-verification" content="w86RdQgR9US_r7V4OengDvxUfTtiJ3MMYt6_fcJZWdM" />" />
+    </head>
+    """, 
+    unsafe_allow_html=True
+)
 
+st.title("My Streamlit App")
 # Load saved items
 model = joblib.load('house_model.pkl')
 model_columns = joblib.load('model_columns.pkl')
@@ -41,4 +50,5 @@ if st.button("Predict Price"):
             
     # Predict
     prediction = model.predict(input_df)[0]
+
     st.success(f"Estimated Market Price: ₹ {round(prediction, 2)}")
