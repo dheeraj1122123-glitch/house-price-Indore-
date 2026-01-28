@@ -4,7 +4,7 @@ import joblib
 st.markdown(
     """
     <head>
-        <meta name="google-site-verification" content="<meta name="google-site-verification" content="w86RdQgR9US_r7V4OengDvxUfTtiJ3MMYt6_fcJZWdM" />" />
+        <meta name="google-site-verification" content="w86RdQgR9US_r7V4OengDvxUfTtiJ3MMYt6_fcJZWdM" />
     </head>
     """, 
     unsafe_allow_html=True
@@ -52,3 +52,4 @@ if st.button("Predict Price"):
     prediction = model.predict(input_df)[0]
 
     st.success(f"Estimated Market Price: ₹ {round(prediction, 2)}")
+
